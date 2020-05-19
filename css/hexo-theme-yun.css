@@ -706,6 +706,26 @@ input {
 .category-lists .category-list-count::after {
   content: ' ] ';
 }
+.wordcloud {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.wordcloud #wordcloud-canvas,
+.wordcloud #wordcloud-sidebar-canvas {
+  cursor: url("https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/link.cur"), pointer;
+}
+.wordcloud #wordbox {
+  pointer-events: none;
+  position: absolute;
+  box-shadow: 0 0 100px 100px rgba(0,0,0,0.1);
+  border-radius: 50px;
+}
+.wordcloud #wordbox-sidebar {
+  pointer-events: none;
+  position: absolute;
+}
 .page-number-basic,
 .pagination .space,
 .pagination .prev,
@@ -1229,6 +1249,9 @@ input {
 .post-markdown {
   line-height: 1.8;
 }
+.post-markdown p {
+  overflow: auto;
+}
 .post-markdown h1 {
   font-size: 2.5em;
   border-bottom: 1px solid rgba(153,153,153,0.5);
@@ -1460,6 +1483,9 @@ input {
   width: 1.5rem;
   height: 1.5rem;
 }
+.table-container {
+  overflow: auto;
+}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -1625,6 +1651,7 @@ td {
 }
 .post-toc ol .toc-item.active>.toc-link {
   color: #f2711c;
+  border-bottom: 1px solid #f2711c;
 }
 .post-toc ol .toc-item.active>.toc-child {
   max-height: 1000px;
@@ -2001,7 +2028,7 @@ td {
   display: inline-flex;
   position: relative;
   width: 15rem;
-  margin: 2rem;
+  margin: 1.5rem;
   cursor: url("https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/link.cur"), pointer;
 }
 .photo-list-item img {
@@ -2017,7 +2044,7 @@ td {
 }
 .photo-list-item figcaption {
   position: absolute;
-  bottom: -2rem;
+  bottom: -1.8rem;
   display: block;
   text-align: center;
   width: 100%;
